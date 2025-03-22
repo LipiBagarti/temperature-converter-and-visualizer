@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Temperature Converter</h1>
+            <button id="dark-mode-toggle" aria-label="Toggle dark mode">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </header>
+        
+        <div class="converter">
+            <div class="input-group">
+                <input type="number" id="temperature" placeholder="Enter temperature">
+                <select id="from-unit">
+                    <option value="celsius">Celsius (°C)</option>
+                    <option value="fahrenheit">Fahrenheit (°F)</option>
+                    <option value="kelvin">Kelvin (K)</option>
+                </select>
+            </div>
+            
+            <div class="conversion-results">
+                <div class="result" id="celsius-result">
+                    <h3>Celsius (°C):</h3>
+                    <p class="value">-</p>
+                    <p class="explanation"></p>
+                </div>
+                <div class="result" id="fahrenheit-result">
+                    <h3>Fahrenheit (°F):</h3>
+                    <p class="value">-</p>
+                    <p class="explanation"></p>
+                </div>
+                <div class="result" id="kelvin-result">
+                    <h3>Kelvin (K):</h3>
+                    <p class="value">-</p>
+                    <p class="explanation"></p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="comparison-chart">
+            <h2>Temperature Comparison Chart</h2>
+            <div class="temperature-scale"></div>
+            <div class="chart-container">
+                <canvas id="tempChart"></canvas>
+            </div>
+            <div class="reference-points">
+                <h3>Common Reference Points:</h3>
+                <ul>
+                    <li>Water Freezing: 0°C / 32°F / 273.15K</li>
+                    <li>Room Temperature: 20-25°C / 68-77°F / 293-298K</li>
+                    <li>Body Temperature: 37°C / 98.6°F / 310.15K</li>
+                    <li>Water Boiling: 100°C / 212°F / 373.15K</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
